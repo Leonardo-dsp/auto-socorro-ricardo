@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('texture.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 2px solid #555;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0 0;
+  color: #f8f9fa;
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+img {
+  width: 100%; /* Ajusta a largura da imagem para 100% da tela */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('guincho2.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(50%);
+  transform: translateY(-20%);
+  transition: transform 0.5s ease;
+}
+
+main:hover .background {
+  transform: translateY(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px 0;
+  text-align: center;
+}
+
+li {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.contact {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; /* Alinha os ícones em linha */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Centraliza os ícones verticalmente */
+  gap: 15px; /* Espaçamento entre ícones */
+}
+
+.contact a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact a:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 40px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #555;
+}
+
+.dev-socials {
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Centraliza os ícones verticalmente */
+  gap: 10px; /* Espaçamento entre ícones */
+}
+
+.dev-socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.dev-socials a:hover {
+  color: #ddd;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scroll-top.show {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos do modal de contato */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
+
+  img {
+    width: 100%;
+    margin: 10px 0; /* Reduz a margem ao redor da imagem */
+  }
+
+  .contact {
+    gap: 10px; /* Ajusta o espaçamento entre os ícones */
+  }
+
+  .contact a {
+    font-size: 20px;
+  }
+
+  .dev-socials {
+    gap: 10px; /* Ajusta o espaçamento entre ícones */
+  }
+
+  .dev-socials a {
+    font-size: 18px;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header h2 {
+    font-size: 16px;
+  }
+
+  .contact {
+    flex-direction: row; /* Mantém os ícones em linha */
+    gap: 10px; /* Ajusta o espaçamento entre ícones */
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+
+  .dev-socials {
+    gap: 10px; /* Ajusta o espaçamento entre ícones */
+  }
+
+  .dev-socials a {
+    font-size: 16px;
+  }
+
+  .scroll-top {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}

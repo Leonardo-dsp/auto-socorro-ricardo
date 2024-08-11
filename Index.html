@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Socorro Ricardo</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS original -->
+</head>
+<body>
+
+  <header>
+    <h1>Auto Socorro Ricardo</h1>
+    <h2>Bragança Paulista - SP</h2>
+  </header>
+
+  <main>
+    <img src="guincho2.JPG" alt="Foto do caminhão de guincho da Auto Socorro Ricardo">
+    
+    <ul>
+      <li>Quem Somos?</li>
+      <p>A Auto Socorro Ricardo é uma empresa de guincho fundada em Bragança Paulista, com o compromisso de oferecer serviços de alta qualidade e confiança. Nosso objetivo é garantir que você, motorista, tenha a assistência necessária em qualquer situação, seja uma pane inesperada, um acidente ou a necessidade de transporte de veículos.</p>
+
+      <li>Nossos Serviços</li>
+      <p>Guincho 24 horas<br>
+      Estamos disponíveis 24 horas por dia, 7 dias por semana, para prestar assistência em qualquer situação de emergência, seja em rodovias, ruas urbanas ou áreas rurais.</p>
+      
+      <li>Fale Conosco</li>
+      <div class="contact">
+        <a href="https://wa.me/11975519637" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/ricardo.spereira600" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+5511975519637"><i class="fas fa-phone"></i></a>
+      </div>
+    </ul>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Auto Socorro Ricardo. Todos os direitos reservados.</p>
+    <div class="dev-socials">
+      <p>Desenvolvido por [Leonardo Pereira]</p>
+      <a href="https://wa.me/11941803929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/leonardo_dspereira" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Botão de voltar ao topo -->
+  <button class="scroll-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Exibe o botão de voltar ao topo quando rolar para baixo
+    window.onscroll = function() {
+      var scrollTopButton = document.querySelector('.scroll-top');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
